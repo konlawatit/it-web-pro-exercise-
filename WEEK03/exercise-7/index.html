@@ -153,8 +153,8 @@
       document.querySelector('#total-amount').innerHTML = totalItems.toFixed(2)
       document.querySelector('#total-price').innerHTML = totalPrice.toFixed(2)
     }
-    function delbtn(val, price){
-      val.parentNode.parentNode.remove()
+    function delbtn(elm, price){
+      elm.parentNode.parentNode.remove()
       totalItems -= 1
       totalPrice -= price
       document.querySelector('#total-amount').innerHTML = totalItems.toFixed(2)

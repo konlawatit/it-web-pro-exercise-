@@ -1,15 +1,10 @@
 function convertADtoBE(input) {
     // AD คือคริสดศักราย
     // BE คือพุทธศักราช
-    //
     // TODO: แปลงปีใน คริสตศักราช เป็น พุทธศักราช เช่น 2000 เป็น "พ.ศ. 2543"
     // โดยให้เติมตัวอักษร พ.ศ. เข้าไปด้านหน้าด้วย
-    console.log(typeof input)
-    if (Number.isInteger(input) & input >= 0) {
-        return "พ.ศ. " + (input+543)
-    } else {
-        return "ไม่ถูกต้อง"
-    }
+    return Number.isInteger(input) && input >= 0 ? "พ.ศ. " + (input+543) : "ไม่ถูกต้อง"
+
 }
 
 function evenOrOdd(input) {
