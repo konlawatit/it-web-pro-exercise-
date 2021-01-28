@@ -54,6 +54,14 @@ function findBMI(input) {
     // ]
     // TODO: ให้คำนวณดัชนีมวลการ (Body Mass Index, bmi) ของแต่ละคน
     // น้ำหนักในหน่วยกิโลกรัม / ความสูงในหน่วยเมตรยกกำลังสอง (ให้ตอบทศนิยมสองตำแหน่ง)
-    input.forEach((data) => data.bmi = (data.weight / (data.height / 100)**2).toFixed(2))
-    return input
+    //
+    //use map
+    return input.map((data) => {
+        data.bmi = (data.weight / (data.height / 100)**2).toFixed(2)
+        return data
+    })
+    //use forEach
+    // input.forEach(data => data.bmi = (data.weight / (data.height / 100)**2).toFixed(2))
+    // return input
+
 }

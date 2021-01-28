@@ -9,20 +9,12 @@ function convertADtoBE(input) {
 
 function evenOrOdd(input) {
     // TODO: ให้ตรวจสอบว่าตัวเลข input เป็นเลขคู่หรือเลขคี่
-    if (input % 2 === 0) {
-        return "even"
-    } else {
-        return "odd"
-    }
+    return input % 2 === 0 ? "even" : "odd"
 }
 
 function getFullName(input) {
     // TODO: ให้นำคำนำหน้าชื่อ ชื่อต้น นามสกุล มาต่อกัน
-   if (input['sex'] === "male") {
-       return "Mr. " + input["firstName"] + " " + input["lastName"]
-   } else {
-       return "Ms. " + input["firstName"] + " " + input["lastName"]
-   }
+    return input['sex'] === 'male' ? "Mr. " + input["firstName"] + " " + input["lastName"] : "Ms. " + input["firstName"] + " " + input["lastName"]
 }
 
 function getFirstName(input) {

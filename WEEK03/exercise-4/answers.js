@@ -9,8 +9,12 @@ function convertTemperature (input) {
         let cel = (fah - 32) * 5 / 9
         return Number(cel.toFixed(1))
     }
-    input.map(value => value["temperature"] = fah_to_celsius(value.temperature))
-    return input
+    return input.map(value => {
+        value["temperature"] = fah_to_celsius(value.temperature)
+        return value
+    })
+    // input.map(value => value["temperature"] = fah_to_celsius(value.temperature))
+    // return input
 }
 
 function filterEvenNumber (input) {
