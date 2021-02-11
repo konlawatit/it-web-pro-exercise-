@@ -3,10 +3,8 @@ const months_th = [ "มกราคม", "กุมภาพันธ์", "ม
 function getDayName(input) {
     // input เป็นเลข 0-6
     // TODO: แปลงเลข 0-6 เป็น วันอาทิตย์ - วันเสาร์
-
     // hint
     // const daysInWeek = ['วันอาทิตย์', 'วันจันทร์', /*...*/]
-    
     return dayInWeek[input]
 }
 

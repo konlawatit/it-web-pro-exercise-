@@ -6,7 +6,7 @@ function sayHello () {
 function isString (input) {
     // input อาจจะเป็น String, Array, Number, Object หรือ Function ก็ได้
     // TODO: ถ้า input เป็น String ให้ return true, ถ้าไม่ใช่ return false
-    console.log(typeof input)
+    //console.log(typeof input)
     return typeof input === "string" ? true : false
 }
 

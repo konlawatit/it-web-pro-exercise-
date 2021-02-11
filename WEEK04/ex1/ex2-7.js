@@ -34,7 +34,7 @@ var app = new Vue({
             },
         ],
         counter: 0,
-        isList: 'disc',
+        isList: 'none',
         isActive: true,
         isToggle: 1,
     },

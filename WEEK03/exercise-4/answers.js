@@ -29,5 +29,5 @@ function filterAgeRange (input) {
 
 function removeByFilter (input) {
     // TODO: ลบ Object ใน Array ด้วยการ filter
-    return input.people.filter(val => input.removeId !== val.id)
+    return input.people.filter(data => data.name.split(' ')[1][0] == 'B')
 }

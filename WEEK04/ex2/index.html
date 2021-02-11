@@ -45,7 +45,7 @@
                                             alt="Placeholder image">
                                     </figure>
                                 </div>
-                                <div class="card-content " :class='item.is_favorite ? bgWarnning : "none"'>
+                                <div class="card-content " :class='item.is_favorite ? bgWarnning : ""'>
                                     <div class="media ">
                                         <div class="media-content">
                                             <p id="title" class="title is-4">{{ item.title }}</p>
@@ -91,7 +91,7 @@
             <div class="column is-3 pt-6 pl-0 pr-5">
                 <div style="display: flex;justify-content: space-between;">
                     <span class="is-size-4 mb-4">Cart ({{ cart.length }})</span>
-                    <a class="is-danger mb-4 button" @click='cart = []' >Clear</a>
+                    <a class="is-danger mb-4 button" @click='cart = []' >Clear</a> <!--cart.splice(0) -->
                 </div>
 
                 <!-- Card element start here------------------------------------------>
