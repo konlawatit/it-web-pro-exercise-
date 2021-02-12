@@ -146,7 +146,7 @@
             <div class="column is-3 pt-6 pl-0 pr-5">
                 <div style="display: flex;justify-content: space-between;">
                     <span class="is-size-4 mb-4">Cart ({{cart.length}})</span>
-                    <a @click="cart = []" class="is-danger mb-4 button">Clear</a>
+                    <a @click="cart = [] ; total=0" class="is-danger mb-4 button">Clear</a>
                 </div>
 
                 <!-- Card element start here ------------------------------------------>
@@ -283,12 +283,12 @@
             methods: {
                 addToCart(product) {
                     let itemIndexInCart = this.cart.indexOf(product)
-                    console.log(itemIndexInCart)
+                    //console.log(itemIndexInCart)
                     if (itemIndexInCart === -1) {
                         product.quantity = 1
                         this.cart.push(product)
                     } else {
-                        this.cart[itemIndexInCart].quantity += 1
+                        this.cart[itemIndexInCart].quantity += 1 // ควรจะใช้การโคลนเพราะตอนนี้เป็นการชี้ pointer
                     }
                     this.total += product.price
                     //console.log(this.cart.indexOf(product))

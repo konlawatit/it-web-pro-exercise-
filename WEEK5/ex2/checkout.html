@@ -264,7 +264,7 @@
             },
             created() {
                 this.cart = JSON.parse(localStorage.getItem("cart"))
-                this.total = this.cart.reduce((sum, val) => sum + val.price, 0)
+                this.total = this.cart.reduce((sum, val) => sum + (val.price * val.quantity ), 0)
             }
         })
     </script>

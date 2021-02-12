@@ -298,7 +298,7 @@
             },
             methods: {
                 addStudent() {
-                    if (this.prename === '' || this.fname === '') {
+                    if (!this.prename || !this.fname || !this.lname ) {
                         alert('Please enter all inputs')
                     } else if (this.score > 100 || this.score < 0) {
                         alert('Score is incorrect')
@@ -331,6 +331,7 @@
             },
             watch: {
                 day_select(newDay, oldDay) {
+                    //console.log(newDay, oldDay)
                     let date = new Date();
                     let date_split = (date+'').split(' ')
                     let date_info = ('00'+date_split[2]).slice(-2) + ' ' + date_split[1]+ ' ' + date_split[3]
@@ -338,13 +339,13 @@
                     let time_info = ('00'+date.getHours()).slice(-2) + ':' + ('00'+date.getMinutes()).slice(-2) + ':' + ('00'+date.getSeconds()).slice(-2)
                     this.logs.push({
                         time: date_info + ' ' + time_info,
-                        value_change: this.day_data[oldDay].value + ' --> ' + this.day_data[newDay].value,
-                        title_change:  this.day_data[oldDay].title + ' --> ' + this.day_data[newDay].title
+                        // value_change: this.day_data[oldDay].value + ' --> ' + this.day_data[newDay].value,
+                        // title_change:  this.day_data[oldDay].title + ' --> ' + this.day_data[newDay].title
+                        value_change: this.day_data.filter(val => val.value == oldDay)[0].value + ' --> ' + this.day_data.filter(val => val.value == newDay)[0].value,
+                        title_change:  this.day_data.filter(val => val.value == oldDay)[0].title + ' --> ' + this.day_data.filter(val => val.value == newDay)[0].title
                     })
                 } 
             }
-
-
         })
     </script>
 
